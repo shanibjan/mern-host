@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@font-face {
+  font-family: 'Gordita Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('GorditaRegular'), url('./fonts/gordita/Gordita Regular.woff') format('woff');
+}
+@font-face {
+      font-family: 'Gordita Light';
+      font-style: normal;
+      font-weight: normal;
+      src: local('Gordita Light'), url('./fonts/gordita/Gordita Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Gordita Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Gordita Bold'), url('./fonts/gordita/Gordita Bold.woff') format('woff');
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.register{
+  width: 27%;
+    display: block;
+    margin: 4% auto;
+}
+.register h1{
+  font-family: 'Gordita Bold';
+}
+.informations input{
+  border: 1px solid #E9E7E7;
+  width: 100%;
+  height: 45px;
+  outline: none;
+  font-weight: 800;
+  font-size: 16px;
+  margin: 1% 0;
+  font-family: 'Gordita Regular';
+  padding: 2%;
+  color: #787676;
+  text-transform: capitalize;
+}
+.create{
+  display: block;
+    text-decoration: none;
+    background-color: #48CAB2;
+    padding: 9px 3%;
+    color: #fff;
+    margin: 0 auto;
+    font-family: 'Gordita Bold';
+    border: none;
+}
+.return-store{
+  text-decoration: none;
+    color: black;
+    font-family: 'Gordita Bold';
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 28px;
+    cursor: pointer;
+}
+.sensor-cards{
+  display: flex;
+    justify-content: space-evenly;
+}
+.card-sensor{
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 0 4%;
+}
+.head-card{
+  text-align: center;
+}
