@@ -15,11 +15,7 @@ const app=express()
 connectDB();
 app.use(cors(
 
-    {
-        origin: [" "],
-        methods: ["POST","GET"],
-        credentials: true
-    }
+  
 
 ));
 app.use(express.json());
