@@ -26,10 +26,7 @@ app.use(express.json());
 app.use(morgan('dev'));
 
 app.use('/api/v1/auth',authRoutes);
-app.get('/',(req,res)=>{
-    res.send('<h1>Welcorrme</h1>')
-   
-})
+
 app.post('/api/v1/sensors/data', async (req, res) => {
     try {
       const { pH, TSS, TDS, BOD, COD, chloride } = req.body;
