@@ -12,16 +12,22 @@ function Login() {
         
         e.preventDefault()
        try {
-        const res=await axios.post('/api/v1/auth/login',{email,password})
-        console.log(res.data.user.role);
-        if(res && res.data.success){
-            window.alert(res.data.message)
-            nav('/dashboard',{state:res.data.user})
-        }else if(res.data.success==false){
-            window.alert(res.data.message)
+        if(email && password){
+
+          const res=await axios.post('/api/v1/auth/login',{email,password})
+          console.log(res.data.user.role);
+          if(res && res.data.success){
+              window.alert(res.data.message)
+              nav('/dashboard',{state:res.data.user})
+          }else if(res.data.success==false){
+              window.alert(res.data.message)
+          }
+        }
+        else{
+          window.alert('All field required')
         }
        } catch (error) {
-        window.alert("Login Failed")
+       window.alert('Login failed')
        }
         
            

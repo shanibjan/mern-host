@@ -16,6 +16,8 @@ function Register() {
         e.preventDefault()
         
         try {
+          if(name && email && password && phone && address){
+
             const res=await axios.post('/api/v1/auth/register',{name,email,password,phone,address})
             console.log(res.data);
             if(res.data.success){
@@ -24,6 +26,9 @@ function Register() {
             }else{
                 window.alert(res.data.message)
             }
+          }else{
+            window.alert('All fields required')
+          }
         } catch (error) {
             console.log(error);
         }
