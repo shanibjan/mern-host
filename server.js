@@ -85,22 +85,22 @@ app.get("/api/v1/sensors/simulate", async (req, res) => {
 });
 
 // GET endpoint to fetch historical data for a specific sensor type
-app.get("api/v1/sensors/simulate:type", async (req, res) => {
-  try {
-    const sensorType = req.params.type;
-    const historicalData = await SensorData.find(
-      {},
-      { _id: 0, [sensorType]: 1, timestamp: 1 }
-    ).sort({ timestamp: 1 });
-    const formattedData = historicalData.map((entry) => ({
-      value: entry[sensorType],
-      timestamp: entry.timestamp,
-    }));
-    res.status(200).json(formattedData);
-  } catch (error) {
-    res.status(500).json({ message: "Error fetching historical data", error });
-  }
-});
+// app.get("api/v1/sensors/simulate:type", async (req, res) => {
+//   try {
+//     const sensorType = req.params.type;
+//     const historicalData = await SensorData.find(
+//       {},
+//       { _id: 0, [sensorType]: 1, timestamp: 1 }
+//     ).sort({ timestamp: 1 });
+//     const formattedData = historicalData.map((entry) => ({
+//       value: entry[sensorType],
+//       timestamp: entry.timestamp,
+//     }));
+//     res.status(200).json(formattedData);
+//   } catch (error) {
+//     res.status(500).json({ message: "Error fetching historical data", error });
+//   }
+// });
 
 app.use(express.static(path.join(__dirname, "client", "build")));
 

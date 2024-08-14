@@ -21,7 +21,7 @@ function DashBoard() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/v1/sensors/simulate"
+          "/api/v1/sensors/simulate"
         );
         setSensorData(response.data.data);
       } catch (error) {
