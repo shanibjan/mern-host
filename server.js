@@ -13,13 +13,9 @@ dotenv.config();
 
 const app = express();
 connectDB();
-app.use(cors());
-const corsOptions = {
-  origin: 'http://localhost:3000', // replace with your frontend's origin
-  optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-
+const corsOptions = { origin: "http://localhost:3000" };
 app.use(cors(corsOptions));
+
 
 app.use(express.json());
 app.use(morgan("dev"));
